@@ -48,6 +48,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Express](https://expressjs.com/pt-br/)
 - [Mongoose](https://mongoosejs.com/)
 - [CORS](https://www.npmjs.com/package/cors?activeTab=versions)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [JsonWebToken](https://www.npmjs.com/package/jsonwebtoken)
 
 ## Observações
 
