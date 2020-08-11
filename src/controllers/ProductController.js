@@ -67,8 +67,6 @@ module.exports = {
                 })
             }
             
-            
-
             return response.json({massage: "updated"});
 
         } catch (err) {
