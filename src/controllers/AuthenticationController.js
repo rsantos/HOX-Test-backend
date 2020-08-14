@@ -18,7 +18,7 @@ module.exports = {
       return response.status(400).send({ error: 'Wrong Password' })
     }
 
-    delete user.password
+    user.password = undefined
 
     const token = jwt.sign({ id: user._id }, process.env.APP_AUTH_SECRET, {
       expiresIn: 86400
