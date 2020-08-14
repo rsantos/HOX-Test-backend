@@ -1,21 +1,20 @@
 const { Router } = require('express')
-const UserController = require('./controllers/UserController')
-const AuthenticationController = require('./controllers/AuthenticationController')
-const ProductController= require('./controllers/ProductController')
-
 const authMiddleware = require('./middlewares/authenticate')
+const UserController = require('./controllers/UserController')
+const ProductController= require('./controllers/ProductController')
+const AuthenticationController = require('./controllers/AuthenticationController')
 
 const routes= Router()
 
-routes.get('/user', UserController.index)
-routes.post('/user', UserController.store)
+routes.get('/users', UserController.index)
+routes.post('/users', UserController.store)
 
-routes.post('/auth',AuthenticationController.store)
+routes.post('/auth', AuthenticationController.store)
 
-routes.use('/product', authMiddleware)
-routes.get('/product', ProductController.index)
-routes.post('/product', ProductController.store)
-routes.put('/product', ProductController.update)
-routes.delete('/product', ProductController.delete)
+routes.use('/products', authMiddleware)
+routes.get('/products', ProductController.index)
+routes.post('/products', ProductController.store)
+routes.put('/products', ProductController.update)
+routes.delete('/products', ProductController.delete)
 
 module.exports = routes
