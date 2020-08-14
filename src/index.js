@@ -7,7 +7,7 @@ const routes = require('./routes')
 
 const app = express();
 
-mongoose.connect( process.env.APP_MONGODB_ACCESS ,{
+mongoose.connect( process.env.MONGODB_URI ,{
     useNewUrlParser:true,
     useUnifiedTopology:true,
     useCreateIndex:true,
